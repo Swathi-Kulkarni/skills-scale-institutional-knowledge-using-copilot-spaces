@@ -1,49 +1,112 @@
-# OctoAcme Project Management Documentation
+# OctoAcme Project Management Docs
 
-Welcome to OctoAcme's project management process documentation. This folder contains comprehensive guides for managing projects across all phases of the project lifecycle—from initiation through retrospectives and continuous improvement.
+Welcome to OctoAcme's project management process documentation. This folder contains comprehensive guidance for managing projects from initiation through closure, enabling consistent, repeatable execution across all teams.
 
-## Quick Links to Process Documents
+## Purpose
 
-Below are links to each OctoAcme project management document with a brief summary:
+Centralize scattered project management knowledge, convert tacit team insights into searchable, versioned artifacts, and give all team members equal access to processes, decisions, and rationale.
 
-- **[octoacme-project-management-overview.md](./octoacme-project-management-overview.md)** — Introduction to OctoAcme's approach, core principles, roles, key artifacts, and high-level lifecycle
-- **[octoacme-project-initiation.md](./octoacme-project-initiation.md)** — Guidance and templates for initiating new projects, including the Project One-pager and decision gates
-- **[octoacme-project-planning.md](./octoacme-project-planning.md)** — Planning activities, backlog templates, estimation, Definition of Done, and release planning
-- **[octoacme-execution-and-tracking.md](./octoacme-execution-and-tracking.md)** — Team rhythm, workflows, PR conventions, quality standards, and tracking practices
-- **[octoacme-release-and-deployment.md](./octoacme-release-and-deployment.md)** — Release types, pre-release requirements, deployment checklists, and rollback procedures
-- **[octoacme-retrospective-and-continuous-improvement.md](./octoacme-retrospective-and-continuous-improvement.md)** — Retrospective structure, running effective retros, and tracking improvements
-- **[octoacme-risks-and-communication.md](./octoacme-risks-and-communication.md)** — Risk register guidance, communication templates, and escalation paths
-- **[octoacme-roles-and-personas.md](./octoacme-roles-and-personas.md)** — Role descriptions and responsibilities for Project Managers, Product Managers, and Developers
+## Quick Links to Process Docs
 
----
+Below are links to each OctoAcme project management document with a one-line summary:
+
+| Document | Purpose |
+|----------|---------|
+| [octoacme-project-management-overview.md](./octoacme-project-management-overview.md) | Introduction to OctoAcme's approach, principles, roles, and key artifacts |
+| [octoacme-project-initiation.md](./octoacme-project-initiation.md) | Guidance and template for initiating new projects (one-pager, stakeholder alignment) |
+| [octoacme-project-planning.md](./octoacme-project-planning.md) | Planning activities, backlog template, estimation, DoD, and checklist |
+| [octoacme-execution-and-tracking.md](./octoacme-execution-and-tracking.md) | Team rhythm, workflows, PR conventions, quality standards, and tracking practices |
+| [octoacme-release-and-deployment.md](./octoacme-release-and-deployment.md) | Release types, deployment checklist, rollback procedures, and incident playbook |
+| [octoacme-retrospective-and-continuous-improvement.md](./octoacme-retrospective-and-continuous-improvement.md) | Retrospective structure, tracking improvements, and building continuous improvement culture |
+| [octoacme-risks-and-communication.md](./octoacme-risks-and-communication.md) | Risk register guidance, communication templates, escalation paths, and incident communication |
+| [octoacme-roles-and-personas.md](./octoacme-roles-and-personas.md) | Role descriptions, responsibilities, and communication patterns for Developers, Product Managers, and Project Managers |
 
 ## OctoAcme Project Management Overview
 
-### Project Lifecycle & Workflow
+### Core Principles
 
-OctoAcme follows a structured five-phase project lifecycle: **Initiation → Planning → Execution → Release → Close & Retrospective**. During initiation, teams validate business need, align stakeholders, and create a lightweight Project One-pager defining the problem, goals, success metrics, and initial timeline. Once approved, the planning phase breaks work into shippable increments with prioritized backlogs, acceptance criteria, and a Definition of Done. Execution emphasizes iterative delivery with small pull requests (≤400 lines), automated testing, and continuous integration before review. The release phase ensures all acceptance criteria are met, security scans pass, and rollback plans are documented. Finally, retrospectives capture learnings and convert them into actionable improvements tracked in the backlog.
+- **Customer-first**: Prioritize customer value and usability in all decisions
+- **Iterative delivery**: Deliver small, testable increments to gather feedback early
+- **Clear ownership**: Each project has a named Project Manager and Product Lead
+- **Data-informed decisions**: Measure impact and iterate based on evidence
+- **Psychological safety**: Encourage feedback, learning, and continuous improvement
 
-### Roles, Communication, and Governance
+### Project Lifecycle
 
-OctoAcme operates with clearly defined roles: **Project Managers** coordinate schedules, risks, and communications; **Product Managers** define what to build and prioritize the backlog; **Developers** implement features and collaborate on design; and **QA/Testing** validates acceptance criteria. Communication follows a structured cadence including daily standups (15 min focus on progress and blockers), weekly delivery syncs showing progress and risks, and monthly stakeholder updates. Risk management is central to the process—teams maintain a Risk Register tracking ID, description, impact, likelihood, owner, and mitigation plan, with escalation paths from team-level triage → PM → Product Lead → Sponsor for blocking issues.
+OctoAcme projects follow a structured five-phase lifecycle:
 
-### Quality & Delivery Standards
+1. **Initiation** — Validate business need, align stakeholders, define success metrics, and make go/no-go decision
+2. **Planning** — Break work into shippable increments, identify dependencies, estimate scope, and align timelines
+3. **Execution** — Build, test, review, iterate, and maintain consistent team rhythm and quality standards
+4. **Release** — Deploy to production, verify functionality, and announce to stakeholders
+5. **Close & Retrospective** — Capture learnings, document improvements, and inform future projects
 
-Quality is embedded throughout OctoAcme's execution model through unit tests for new logic, integration tests where applicable, end-to-end smoke tests before release, and security scanning in CI. The team tracks velocity, burndown, and success metrics on project dashboards, with manual QA for feature acceptance when needed. Pull Request workflows require at least one approval before merging, automated test and linting in CI, and clear issue links with acceptance criteria in PR descriptions. Release management is formalized with pre-release checklists, smoke tests on staging, and documented rollback procedures to minimize production risk.
+### Key Roles
 
-### Key Artifacts & Continuous Improvement
+- **Project Manager (PM)**: Coordinates delivery, schedules, manages risks and communications
+- **Product Manager (PdM)**: Defines outcomes, prioritizes backlog, and measures success
+- **Developers**: Implement features, collaborate on design and testability
+- **QA/Testing**: Validate quality and ensure acceptance criteria are met
+- **Stakeholders**: Provide inputs, approvals, and strategic guidance
 
-The process is anchored in five core artifacts: the Project Charter/One-pager, Roadmap and Release Plan, Sprint/Iteration Backlog, Acceptance Criteria & Definition of Done, and Risk Register. Team members maintain these living documents in the project repository—with process-specific docs stored in `docs/` for shared reference and in `.copilot/` for Copilot Spaces context. The retrospective practice ensures continuous improvement: teams timebox 45–75 minute sessions after each sprint or milestone to discuss what went well, what could improve, and assign 2–3 prioritized action items with clear owners and due dates, measured for impact over time.
+### Essential Artifacts
 
----
+- Project Charter / One-pager (Problem, Goal, Success Metrics)
+- Roadmap and Release Plan
+- Prioritized Product Backlog with Acceptance Criteria
+- Definition of Done (DoD)
+- Risk Register (with mitigation plans)
+- Sprint/Iteration Plans
+- Release Notes and Deployment Checklist
+- Retrospective notes and action items
+
+### Communication Cadence
+
+- **Daily**: Team standups (15 min) focused on progress, blockers, and dependencies
+- **Weekly**: PM + PdM sync to review progress and escalate risks
+- **Twice-weekly**: Delivery team standups (or as agreed)
+- **Monthly**: Stakeholder updates
+- **Ad-hoc**: Escalations as needed for blockers and critical issues
 
 ## How to Use These Docs
 
-- **New to OctoAcme?** Start with [octoacme-project-management-overview.md](./octoacme-project-management-overview.md) to understand the big picture.
-- **Starting a new project?** Use [octoacme-project-initiation.md](./octoacme-project-initiation.md) and the Project One-pager template.
-- **In execution mode?** Reference [octoacme-execution-and-tracking.md](./octoacme-execution-and-tracking.md) for team rhythm and PR workflows.
-- **Need to escalate a risk?** Check [octoacme-risks-and-communication.md](./octoacme-risks-and-communication.md) for escalation paths and templates.
-- **Preparing a release?** Use [octoacme-release-and-deployment.md](./octoacme-release-and-deployment.md) for checklists and procedures.
-- **Running a retrospective?** See [octoacme-retrospective-and-continuous-improvement.md](./octoacme-retrospective-and-continuous-improvement.md) for structure and templates.
+### For New Team Members
+- Start with [octoacme-project-management-overview.md](./octoacme-project-management-overview.md) to understand OctoAcme's approach
+- Review [octoacme-roles-and-personas.md](./octoacme-roles-and-personas.md) to find your role and responsibilities
+- Refer to phase-specific docs as you move through the project lifecycle
 
-Keep these documents updated as processes evolve. Use the [Add/Update Content issue template](../.github/ISSUE_TEMPLATE/add-update-content-to-process-docs.yml) to propose improvements or new content.
+### For Project Managers
+- Use [octoacme-project-initiation.md](./octoacme-project-initiation.md) to kick off new projects
+- Follow [octoacme-project-planning.md](./octoacme-project-planning.md) for planning activities
+- Track execution using [octoacme-execution-and-tracking.md](./octoacme-execution-and-tracking.md)
+- Manage risks with guidance in [octoacme-risks-and-communication.md](./octoacme-risks-and-communication.md)
+- Prepare releases using [octoacme-release-and-deployment.md](./octoacme-release-and-deployment.md)
+- Run retrospectives with [octoacme-retrospective-and-continuous-improvement.md](./octoacme-retrospective-and-continuous-improvement.md)
+
+### For Product Managers
+- Create project one-pagers using the template in [octoacme-project-initiation.md](./octoacme-project-initiation.md)
+- Define acceptance criteria and DoD in [octoacme-project-planning.md](./octoacme-project-planning.md)
+- Prioritize backlog items and track success metrics
+- Participate in retrospectives to refine the process
+
+### For Developers
+- Understand PR and coding conventions in [octoacme-execution-and-tracking.md](./octoacme-execution-and-tracking.md)
+- Review acceptance criteria from planning phase
+- Contribute estimates and risk identification during planning
+- Participate in daily standups and retrospectives
+
+## Keeping Docs Up-to-Date
+
+These documents are living artifacts that evolve with our team and projects. To request updates or additions:
+
+1. Open an issue using the [.github/ISSUE_TEMPLATE/add-update-content-to-process-docs.yml](.github/ISSUE_TEMPLATE/add-update-content-to-process-docs.yml) template
+2. Describe the gap, improvement, or new content needed
+3. Provide rationale and suggested content (if available)
+4. Submit for team review and incorporation
+
+## Questions or Feedback?
+
+If you have questions about these processes or would like to suggest improvements, please:
+- Open an issue in the repository
+- Reach out to your Project Manager or Product Lead
+- Bring ideas to the retrospective discussion
